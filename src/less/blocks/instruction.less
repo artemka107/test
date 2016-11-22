@@ -1,0 +1,131 @@
+.instruction {
+  @media @lg {
+    width: 570px;
+  }
+}
+
+.instruction__nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+
+  @media @md {
+    margin-bottom: 0;
+    justify-content: space-between;
+  }
+}
+
+.instruction__nav-item {
+  position: relative;
+  width: 50%;
+  font-size: @font-size + 1;
+  cursor: pointer;
+  text-decoration: underline;
+  display: block;
+  padding-left: 30px;
+  padding-right: 9px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  @media @md {
+    width: auto;
+    padding-left: 40px;
+    padding-right: 20px;
+    font-size: @font-size + 3;
+    flex-grow: 1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 6px;
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/sprite.png");
+  }
+
+  &--ie {
+    &::after {
+      background-position: -10px -321px;
+    }
+  }
+
+  &--ff {
+    &::after {
+      background-position: -10px -251px;
+    }
+  }
+
+  &--ch {
+    &::after {
+      background-position: -10px -181px;
+    }
+  }
+
+  &--saf {
+    &::after {
+      background-position: -10px -392px;
+    }
+  }
+
+  &--ie.tab__toggle--active {
+    &::after {
+      background-position: -10px -286px;
+    }
+  }
+
+  &--ff.tab__toggle--active {
+    &::after {
+      background-position: -10px -216px;
+    }
+  }
+
+  &--ch.tab__toggle--active {
+    &::after {
+      background-position: -10px -146px;
+    }
+  }
+
+  &--saf.tab__toggle--active {
+    &::after {
+      background-position: -10px -356px;
+    }
+  }
+}
+
+
+
+.instruction__panel {
+  background-color: #f9f9f9;
+  background-image:
+    linear-gradient(to bottom, #f9f9f9, #f3f3f3);
+    border-radius: 7px;
+  padding-left: 20px;
+  padding-bottom: 25px;
+  padding-right: 20px;
+  padding-top: 20px;
+  box-shadow: 0 1px 5px fade(#000, 25%);
+}
+
+.instruction__list {
+  margin: 0;
+  padding: 0;
+  padding-left: 15px;
+}
+
+.instruction__item {
+  padding-left: 7px;
+  font-size: @font-size + 2;
+  line-height: @line-height + 2;
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
